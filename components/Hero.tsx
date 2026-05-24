@@ -140,7 +140,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: HERO_DELAY + 0.4 }}
           className="text-[#d4a847] font-semibold tracking-widest text-sm sm:text-base uppercase mb-5"
         >
-          Owner · Project Manager · Sole Programmer
+          Owner · Project Manager · Programmer · Modeler · Animator
         </motion.p>
 
         {/* Description */}

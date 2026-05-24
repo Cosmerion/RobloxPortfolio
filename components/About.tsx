@@ -10,6 +10,8 @@ const roles = [
   "Sole Programmer",
   "Backend Developer",
   "Frontend Developer",
+  "Modeler",
+  "Animator",
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -73,25 +75,24 @@ export default function About() {
               </div>
 
               <p className="text-white/60 text-sm leading-relaxed">
-                PleaseRestore is the sole programmer behind all showcased Roblox projects,
+                PleaseRestore is the sole developer behind all showcased Roblox projects,
                 handling every aspect of scripting — backend systems, frontend development,
                 gameplay architecture, optimization, UI systems, combat systems, progression
                 systems, and data persistence. As the owner and project manager of every project,
                 PleaseRestore leads overall development direction, feature planning, and project
-                structure while also contributing to around <span className="text-white/80">15%</span> of
-                the game assets and some basic animations.
+                structure. Beyond programming, PleaseRestore also handles{" "}
+                <span className="text-white/80">modeling and animation</span> across projects.
               </p>
             </div>
 
-            {/* Asset contribution note */}
+            {/* Modeling & animation note */}
             <motion.div
               {...fadeUp(0.2)}
               className="glass rounded-xl p-5 border border-[#d4a847]/15 text-sm text-white/50 leading-relaxed"
             >
-              <span className="text-[#d4a847] font-semibold">Asset Note: </span>
-              The majority of assets and models are created by{" "}
-              <span className="text-white/75 font-medium">LifeFabrication</span>, who handles most
-              of the visual asset production across projects.
+              <span className="text-[#d4a847] font-semibold">Modeling &amp; Animation: </span>
+              PleaseRestore handles all modeling and animation work across projects, crafting
+              the assets and animations that bring each experience to life.
             </motion.div>
           </motion.div>
 
