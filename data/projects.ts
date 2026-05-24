@@ -33,7 +33,7 @@ export const projects: Project[] = [
     ],
     images: ["/assets/222.png", "/assets/222131.png", "/assets/3332.png"],
     video: "/assets/Divine Journey.mp4",
-    tags: ["Luau", "Backend", "Combat Systems", "UI Systems", "Architecture"],
+    tags: ["Roblox TypeScript", "Backend", "Combat Systems", "UI Systems", "Architecture"],
   },
   {
     id: "clover-incremental",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     ],
     images: [],
     video: "/assets/Clover Incremental.mp4",
-    tags: ["Luau", "Progression", "Backend", "Data Systems"],
+    tags: ["Roblox TypeScript", "Progression", "Backend", "Data Systems"],
   },
   {
     id: "random-fish-game",
