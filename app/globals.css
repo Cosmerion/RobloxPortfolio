@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Design tokens ─────────────────────────────────────── */
+@theme {
+  --color-gold:        #d4a847;
+  --color-gold-bright: #f0c040;
+  --color-gold-dim:    #a07830;
+  --color-gold-glow:   rgba(212, 168, 71, 0.45);
+
+  --color-bg:          #09090f;
+  --color-bg-2:        #0e0e1a;
+  --color-surface:     rgba(255, 255, 255, 0.03);
+  --color-border:      rgba(255, 255, 255, 0.06);
+
+  --font-display: 'Orbitron', sans-serif;
+
+  /* Animations */
+  --animate-float:      float 4s ease-in-out infinite;
+  --animate-float-slow: float-slow 7s ease-in-out infinite;
+  --animate-pulse-gold: pulse-gold 2.4s ease-in-out infinite;
+  --animate-shimmer:    shimmer 2.6s linear infinite;
+  --animate-spin-slow:  spin-slow 12s linear infinite;
+  --animate-blob:       blob 8s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Keyframes ─────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-18px) rotate(4deg); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-26px); }
 }
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 20px rgba(212,168,71,0.3); }
+  50%       { box-shadow: 0 0 45px rgba(212,168,71,0.65); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes blob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%       { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50%       { border-radius: 50% 60% 30% 60% / 40% 30% 70% 60%; }
+  75%       { border-radius: 60% 40% 60% 30% / 70% 50% 40% 50%; }
+}
+
+/* ─── Base resets ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: #f0f0f8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #0d0d1a; }
+::-webkit-scrollbar-thumb { background: #d4a847; border-radius: 4px; }
+
+/* ─── Selection ─────────────────────────────────────────── */
+::selection { background: rgba(212,168,71,0.28); color: #f0f0f8; }
+
+/* ─── Reusable classes ──────────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #d4a847, #f0c040, #d4a847);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.gold-glow-text {
+  text-shadow: 0 0 20px rgba(212,168,71,0.55), 0 0 40px rgba(212,168,71,0.25);
+}
+
+.section-heading {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Subtle grid overlay */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.014) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
