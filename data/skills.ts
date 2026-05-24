@@ -44,4 +44,6 @@ export const aboutStats = [
   { label: "Architecture"      },
   { label: "UI Systems"        },
   { label: "Leadership"        },
+  { label: "3D Modeling"       },
+  { label: "Animation"         },
 ];

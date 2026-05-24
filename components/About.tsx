@@ -30,7 +30,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <motion.div {...fadeUp()} className="text-center mb-20">
-          <p className="text-[#d4a847] text-xs tracking-[0.3em] uppercase mb-3">Developer</p>
+          <p className="text-[#d4a847] text-xs tracking-[0.3em] uppercase mb-3">Full Stack Developer</p>
           <h2 className="section-heading text-4xl sm:text-5xl font-black text-white">
             About <span className="gold-text">Me</span>
           </h2>
@@ -58,7 +58,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="section-heading text-xl font-bold text-white">PleaseRestore</h3>
-                  <p className="text-[#d4a847] text-sm tracking-wide">Roblox Developer</p>
+                  <p className="text-[#d4a847] text-sm tracking-wide">Full Stack Roblox Developer</p>
                 </div>
               </div>
 
@@ -74,14 +74,15 @@ export default function About() {
                 ))}
               </div>
 
-              <p className="text-white/60 text-sm leading-relaxed">
-                PleaseRestore is the sole developer behind all showcased Roblox projects,
-                handling every aspect of scripting — backend systems, frontend development,
-                gameplay architecture, optimization, UI systems, combat systems, progression
-                systems, and data persistence. As the owner and project manager of every project,
-                PleaseRestore leads overall development direction, feature planning, and project
-                structure. Beyond programming, PleaseRestore also handles{" "}
-                <span className="text-white/80">modeling and animation</span> across projects.
+              <p className="text-white/60 text-sm leading-relaxed mb-4">
+                PleaseRestore is a full stack Roblox developer capable of building a complete
+                Roblox game entirely solo — from backend systems and frontend development to
+                gameplay architecture, UI systems, combat systems, data persistence, optimization,
+                and project management. Beyond programming, PleaseRestore also handles all{" "}
+                <span className="text-white/80">modeling and animation</span> work across projects.
+              </p>
+              <p className="text-[#d4a847]/80 text-xs font-semibold tracking-wide uppercase border border-[#d4a847]/20 rounded-lg px-4 py-2 inline-block">
+                ✦ Can build a complete Roblox game entirely on my own
               </p>
             </div>
 
@@ -91,8 +92,8 @@ export default function About() {
               className="glass rounded-xl p-5 border border-[#d4a847]/15 text-sm text-white/50 leading-relaxed"
             >
               <span className="text-[#d4a847] font-semibold">Modeling &amp; Animation: </span>
-              PleaseRestore handles all modeling and animation work across projects, crafting
-              the assets and animations that bring each experience to life.
+              PleaseRestore handles all modeling and animation work across projects — crafting
+              every asset, prop, environment, and animation that brings each experience to life.
             </motion.div>
           </motion.div>
 
